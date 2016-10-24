@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#d3052b</color>
+    <color name="colorPrimaryDark">#d3052b</color>
+    <color name="light_gray">#eeeeee</color>
+
+    <!-- 首页颜色 -->
+    <color name="backBottom">#d3052b</color>
+    <color name="backBottom_in">#50000000</color>
+
+    <!--登录页颜色-->
+    <color name="top_line">#b2b2b2</color>
+    <color name="text_normal">#54585b</color>
+    <color name="text_click">#d3052b</color>
+    <color name="title">#d3052b</color>
+    <!-- 白色 -->
+    <color name="white">#FFFFFF</color>
+    <!-- 黑色 -->
+    <color name="black">#000000</color>
+    <!-- 红色 -->
+    <color name="red">#CC0000</color>
+</resources>
