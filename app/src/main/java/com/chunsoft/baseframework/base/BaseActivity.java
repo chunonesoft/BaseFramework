@@ -22,6 +22,8 @@ public abstract class BaseActivity<P extends BasePresenterImpl> extends AppCompa
         //设置布局文件
         setContentView(getLayoutId());
         ButterKnife.bind(this);
+        initViews();
+        initData();
 
     }
 
@@ -52,4 +54,6 @@ public abstract class BaseActivity<P extends BasePresenterImpl> extends AppCompa
             presenter.detachView();
         }
     }
+    protected abstract void initData();
+    protected abstract void initViews();
 }

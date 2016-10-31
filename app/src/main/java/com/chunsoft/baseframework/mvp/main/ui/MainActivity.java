@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.Toolbar;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
@@ -17,6 +18,8 @@ import com.chunsoft.baseframework.mvp.message.ui.MessageFragment;
 import com.chunsoft.baseframework.mvp.my.ui.LoginActivity;
 import com.chunsoft.baseframework.mvp.my.ui.MyFragment;
 
+import butterknife.BindView;
+
 public class MainActivity extends BaseActivity<MainPresenterImpl>
         implements MainView ,BottomNavigationBar.OnTabSelectedListener{
     private BottomNavigationBar mBottomBar;
@@ -25,13 +28,15 @@ public class MainActivity extends BaseActivity<MainPresenterImpl>
     private MessageFragment messageFragment;
     private MyFragment myFragment;
 
+    @BindView(R.id.toolbar1)
+    Toolbar toolbar1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
         presenter.switchNavigation();
+
     }
 
     @Override
@@ -44,9 +49,20 @@ public class MainActivity extends BaseActivity<MainPresenterImpl>
         return R.layout.activity_main;
     }
 
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initViews() {
+        setSupportActionBar(toolbar1);
+    }
+
     //设置BottomNavigationBar
     @Override
     public void SwitchItem() {
+        toolbar1.setTitleTextColor(getResources().getColor(R.color.white));
         mBottomBar = (BottomNavigationBar) findViewById(R.id.bottom_bar);
         mBottomBar.setMode(BottomNavigationBar.MODE_FIXED);
         mBottomBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC);

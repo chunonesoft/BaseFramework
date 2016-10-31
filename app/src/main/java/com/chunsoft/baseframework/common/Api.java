@@ -8,4 +8,5 @@ package com.chunsoft.baseframework.common;
 
 public class Api {
     public static final String BASEURL = "http://192.168.191.1:8080/CSSM/";
+    public static final String BAOZOU = "http://dailyapi.ibaozou.com";
 }

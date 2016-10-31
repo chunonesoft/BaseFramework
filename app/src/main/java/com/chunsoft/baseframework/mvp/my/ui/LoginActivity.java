@@ -45,6 +45,15 @@ public class LoginActivity extends BaseActivity<LoginPersenterImpl> implements L
         return R.layout.activity_login;
     }
 
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initViews() {
+
+    }
 
 
     @Override
